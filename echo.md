@@ -1,4 +1,0 @@
-246b4af9.e2fe015dfe344bb6a4fd7a39b09e277a
-
-export LIGHTHOUSE_API_KEY=246b4af9.e2fe015dfe344bb6a4fd7a39b09e277a
-
