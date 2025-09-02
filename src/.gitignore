@@ -1,0 +1,31 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Env & secrets
+.env
+credentials.json
+token.json
+echo.md
+
+
+# Reports & logs
+*.log
+migration.log
+binary-migration-report.json
+migration-report.json
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Temporary files
+tmp/
+*.tmp
+credentials.json
+token.json
+.env

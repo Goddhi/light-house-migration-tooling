@@ -1,0 +1,28 @@
+{
+  "name": "lighthouse-drive-migrator",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "lighthouse-migrate": "src/cli/index.js"
+  },
+  "scripts": {
+    "start": "node src/cli/index.js",
+    "test": "node --test test/*.test.js",
+    "lint": "echo 'Add ESLint if needed'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Binary file migration tool from Google Drive to Lighthouse storage",
+  "dependencies": {
+    "@google-cloud/local-auth": "^3.0.1",
+    "@lighthouse-web3/sdk": "^0.4.1",
+    "chalk": "^5.6.0",
+    "commander": "^14.0.0",
+    "fs-extra": "^11.3.1",
+    "googleapis": "^159.0.0",
+    "inquirer": "^12.9.4",
+    "ora": "^8.2.0"
+  }
+}
