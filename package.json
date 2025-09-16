@@ -1,28 +1,27 @@
 {
-  "name": "lighthouse-drive-migrator",
-  "version": "1.0.0",
+  "name": "lighthouse-drive-migration",
+  "version": "0.1.0",
   "type": "module",
-  "main": "src/index.js",
   "bin": {
-    "lighthouse-migrate": "src/cli/index.js"
+    "lh": "./dist/cli/min.js",
+    "lh-s3": "./dist/cli/s3.js"
   },
   "scripts": {
-    "start": "node src/cli/index.js",
-    "test": "node --test test/*.test.js",
-    "lint": "echo 'Add ESLint if needed'"
+    "build": "tsc",
+    "link": "npm link"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "Binary file migration tool from Google Drive to Lighthouse storage",
   "dependencies": {
-    "@google-cloud/local-auth": "^3.0.1",
-    "@lighthouse-web3/sdk": "^0.4.1",
-    "chalk": "^5.6.0",
-    "commander": "^14.0.0",
-    "fs-extra": "^11.3.1",
-    "googleapis": "^159.0.0",
-    "inquirer": "^12.9.4",
-    "ora": "^8.2.0"
+    "@aws-sdk/client-s3": "^3.645.0",
+    "@aws-sdk/credential-providers": "^3.645.0",
+    "@google-cloud/local-auth": "^3.0.0",
+    "@lighthouse-web3/sdk": "^0.4.2",
+    "commander": "^12.1.0",
+    "googleapis": "^144.0.0",
+    "p-limit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
   }
 }
