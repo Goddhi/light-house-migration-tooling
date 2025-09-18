@@ -1,5 +1,5 @@
 ## Lighthouse Migration CLI
-A simple CLI tool to migrate files from Google Drive and S3 to Lighthouse-web3
+A simple CLI tool to migrate files from Google Drive and S3 to Lighthouse-web3.
 It lists files in your Google Drive, S3 filters out Google Docs/Sheets/Slides, and uploads eligible files to Lighthouse using your API key.
 
 ### Google Drive Migration
@@ -44,7 +44,7 @@ It lists files in your Google Drive, S3 filters out Google Docs/Sheets/Slides, a
 ### Clone and build the CLI:
 
 ```
-git clone https://github.com/Goddhi/light-house-migrate-google-drive.git
+git clone https://github.com/Goddhi/light-house-migration-tooling
 cd lighthouse-drive-migration
 npm install
 npm run build
