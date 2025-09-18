@@ -1,7 +1,8 @@
-## Lighthouse Drive Migration CLI
-A simple CLI tool to migrate files from Google Drive to Lighthouse-web3
-It lists files in your Google Drive, filters out Google Docs/Sheets/Slides, and uploads eligible files to Lighthouse using your API key.
+## Lighthouse Migration CLI
+A simple CLI tool to migrate files from Google Drive and S3 to Lighthouse-web3
+It lists files in your Google Drive, S3 filters out Google Docs/Sheets/Slides, and uploads eligible files to Lighthouse using your API key.
 
+### Google Drive Migration
 ###  Features
 
 - Authenticate with your Google account
@@ -74,10 +75,53 @@ Options:
   --max <MB>         Max file size in MB (default: 50)
 ```
 
-### Notes
+#### Notes
 
 **Google Workspace files (Docs, Sheets, Slides) cannot be exported in their native formats, so they’re always skipped.**
 
 **Files over the size threshold are also skipped.**
 
 **The first time you run the CLI, it will open a browser window to authenticate with your Google account and create token.json.**
+
+
+### S3 Migration 
+
+#### Prerequisites
+
+Node.js ≥ 18
+
+A Lighthouse API key (LIGHTHOUSE_API_KEY in your environment)
+AWS credentials configured (AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY)
+Ensure your IAM user has at least the following permissions:
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    { "Effect": "Allow", "Action": ["s3:ListBucket","s3:GetBucketLocation"], "Resource": "arn:aws:s3:::<your-bucket>" },
+    { "Effect": "Allow", "Action": ["s3:GetObject"], "Resource": "arn:aws:s3:::<your-bucket>/*" }
+  ]
+}
+```
+
+#### Install (local development)
+```
+npm install
+npm run build
+npm link
+```
+
+#### Analyze an S3 bucket
+```
+lh-s3 <bucket-name> --region <region> [--prefix <path/>] --analyze
+```
+
+#### Migrate objects from S3 → Lighthouse
+```
+lh-s3 <bucket-name> --region <region> 
+```
+
+
+#### Notes
+- The --analyze flag performs a dry-run without uploading.
+- Use --max <MB> to restrict max file size (default: 50 MB).
+- Prefix is optional; omit it to scan the entire bucket.

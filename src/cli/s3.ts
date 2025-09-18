@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command } from "commander";
 import { S3Client, ListObjectsV2Command, GetObjectCommand, _Object } from "@aws-sdk/client-s3";
 import { fromIni } from "@aws-sdk/credential-providers";
@@ -47,7 +48,7 @@ async function downloadToBuffer(s3: S3Client, bucket: string, key: string) {
   return streamToBuffer(out.Body as Readable);
 }
 
-// --- Core Migration ---
+// Core Migration
 async function migrateS3(params: {
   bucket: string;
   prefix?: string;
@@ -113,7 +114,7 @@ async function migrateS3(params: {
   console.log(`\nDone. ok=${ok} fail=${fail} skipped=${oversized.length} in ${dur.toFixed(1)}s (${thr})`);
 }
 
-// --- CLI wiring ---
+// CLI wiring
 const program = new Command();
 program
   .name("lh-s3")

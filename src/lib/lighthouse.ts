@@ -1,7 +1,7 @@
 import lighthouse from "@lighthouse-web3/sdk";
 
 export async function ensureKeyValid(key: string) {
-  await lighthouse.getBalance(key); // throws if invalid
+  await lighthouse.getBalance(key); 
 }
 
 export async function uploadBuffer(buf: Buffer, key: string) {

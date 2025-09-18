@@ -84,7 +84,7 @@ async function migrateDrive(folderId: string | undefined, analyzeOnly: boolean, 
   console.log(`\nDone. ok=${ok} fail=${fail} skipped=${skipped} in ${dur.toFixed(1)}s (${throughput})`);
 }
 
-// ---------- Commander wiring ----------
+// Commander wiring 
 const program = new Command();
 program.name("lh").description("Lighthouse Drive migration CLI").version("0.1.0");
 
