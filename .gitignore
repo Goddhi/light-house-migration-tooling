@@ -2,12 +2,13 @@
 node_modules/
 package-lock.json
 
-# Env & secrets
+# Build output
+dist/
+
+# Environment variables and secrets
 .env
 credentials.json
 token.json
-echo.md
-
 
 # Reports & logs
 *.log
@@ -22,10 +23,8 @@ Thumbs.db
 *.swo
 .idea/
 .vscode/
+echo.md
 
 # Temporary files
 tmp/
 *.tmp
-credentials.json
-token.json
-.env
