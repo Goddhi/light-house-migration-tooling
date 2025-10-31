@@ -2,7 +2,7 @@
 
 A CLI tool to migrate files from Google Drive and AWS S3 to [Lighthouse](https://lighthouse.storage/)
 
-## ✨ Features
+##  Features
 
 ### Google Drive Migration
 - **OAuth 2.0 Authentication** - Secure authentication with automatic token refresh
@@ -29,9 +29,9 @@ A CLI tool to migrate files from Google Drive and AWS S3 to [Lighthouse](https:/
 - **Google Account** (for Google Drive migration)
 - **AWS Credentials** (for S3 migration)
 
----
 
 ## 🚀 Quick Start
+
 
 ### Installation
 
@@ -58,7 +58,7 @@ npm link
    - Create a new project (or select existing)
    - Enable Google Drive API
    - Create OAuth 2.0 Client ID → Choose "Desktop app" type
-   - Download or copy your Client ID and Client Secret
+   - copy your Client ID and Client Secret
 
 2. **Configure environment variables:**
 
@@ -150,17 +150,6 @@ lh list folders --flat          # Flat list view
 lh list folders --search "Photos"  # Search by name
 ```
 
-Example output:
-```
-📁 My Drive (root)
-├── 📁 Documents
-│      ID: 1abc123xyz
-├── 📁 Photos
-│      ID: 1def456uvw
-└── 📁 Projects
-       ID: 1ghi789rst
-```
-
 #### `lh list files`
 List files in Google Drive.
 
@@ -171,19 +160,6 @@ lh list files --extension pdf           # Filter by extension
 lh list files --search "report"         # Search by filename
 lh list files --limit 20                # Limit results
 ```
-
-Example output:
-```
-1. 📄 document.pdf
-   Size: 2.5 MB
-   ID:   1xyz789abc123
-
-2. 📄 photo.jpg
-   Size: 1.2 MB
-   ID:   1uvw456def789
-```
-
----
 
 ### Migration Commands
 
@@ -270,7 +246,7 @@ lh list files --folder 1abc123xyz
 lh migrate drive --files 1xyz789,1uvw456,1rst012
 ```
 
-### Example 4: Complex Filtering
+### Example 4:  Filtering
 
 ```bash
 # Migrate PDFs and images under 100MB from two folders,
@@ -316,25 +292,7 @@ lh-s3 my-bucket --region us-east-1 --concurrency 8
 lh-s3 my-bucket --region us-east-1 --max 200
 ```
 
----
 
 
-### Environment Variables
-
-Create a `.env` file in the project root:
-
-```env
-# Required: Your Lighthouse API key
-# Get one at: https://files.lighthouse.storage/
-LIGHTHOUSE_API_KEY=your_lighthouse_api_key_here
-
-# Required: Google OAuth credentials for Drive access
-# Create these at: https://console.cloud.google.com/apis/credentials
-# → Create OAuth 2.0 Client ID → Desktop app type
-GOOGLE_CLIENT_ID=your_google_client_id_here
-GOOGLE_CLIENT_SECRET=your_google_client_secret_here
-```
-
-**Note:** The `.env` file is gitignored for security. Never commit credentials to git!
 
 
