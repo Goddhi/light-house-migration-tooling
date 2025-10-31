@@ -13,15 +13,19 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.645.0",
     "@aws-sdk/credential-providers": "^3.645.0",
-    "@google-cloud/local-auth": "^3.0.0",
     "@lighthouse-web3/sdk": "^0.4.2",
     "commander": "^12.1.0",
+    "dotenv": "^17.2.3",
     "googleapis": "^144.0.0",
-    "p-limit": "^5.0.0"
+    "keytar": "^7.9.0",
+    "open": "^10.0.0",
+    "p-limit": "^5.0.0",
+    "prompts": "^2.4.2"
   },
   "devDependencies": {
+    "@types/node": "^22.5.0",
+    "@types/prompts": "^2.4.9",
     "tsx": "^4.19.0",
-    "typescript": "^5.5.0",
-    "@types/node": "^22.5.0"
+    "typescript": "^5.5.0"
   }
 }
