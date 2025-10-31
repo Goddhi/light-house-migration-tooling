@@ -30,7 +30,7 @@ A CLI tool to migrate files from Google Drive and AWS S3 to [Lighthouse](https:/
 - **AWS Credentials** (for S3 migration)
 
 
-## 🚀 Quick Start
+##  Quick Start
 
 
 ### Installation
@@ -206,7 +206,7 @@ lh migrate drive \
 
 ---
 
-## 📝 Complete Workflow Examples
+## Complete Workflow Examples
 
 ### Example 1: Migrate Specific Folder
 
@@ -215,7 +215,7 @@ lh migrate drive \
 lh list folders --search "Documents"
 
 # Output shows:
-# 📁 Documents
+#  Documents
 #    ID: 1abc123xyz
 
 # Step 2: Analyze it first
@@ -261,7 +261,7 @@ lh migrate drive \
 
 ---
 
-## 🪣 AWS S3 Migration
+## AWS S3 Migration
 
 ### Setup
 
